@@ -1,0 +1,30 @@
+README.md
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+
+# Virtual environment
+.env
+.venv/
+venv/
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+docker-compose.yml
+Dockerfile
+.docker
+.dockerignore
+
+# PyCharm
+.idea
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
