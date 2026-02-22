@@ -14,13 +14,13 @@ class UserCreate(BaseModel):
     age: int | None = Field(default=None, gt=0, le=150, description="年龄", examples=[18])
     height: Decimal | None = Field(default=None, ge=0, le=300, description="身高", examples=[168.86])
     weight: float | None = Field(default=None, gt=0, lt=200, description="体重", examples=[60.11])
-    birthday: date | None = Field(default=None, description="生日", examples=[date(2001, 8, 1)])
+    birthday: date | None = Field(default=None, description="生日", examples=["2011-05-06"])
     status: bool | None = Field(default=None, description="状态", examples=[True])
     create_time: datetime | None = Field(
         default=None,
         description="创建时间",
         alias="createTime",
-        examples=[datetime.now()]
+        examples=["2026-02-22T19:13:12"]
     )
 
     @field_validator("birthday")
@@ -50,12 +50,12 @@ class UserPublic(BaseModel):
     birthday: date | None = Field(
         default=None,
         description="生日",
-        examples=[date(2001, 8, 1), "2011-05-06"]
+        examples=["2011-05-06"]
     )
     status: bool | None = Field(default=None, description="状态", examples=[True])
     create_time: datetime | None = Field(
         default=None,
         description="创建时间",
         alias="createTime",
-        examples=[datetime.now()]
+        examples=["2026-02-22T19:13:12"]
     )
