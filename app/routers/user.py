@@ -44,9 +44,19 @@ async def create_user(c: UserCreate, session: SessionDepend) -> UserCreateRespon
 #     return p
 
 
-@router.get("/{user_id}", summary="获取用户")
+@router.get("/{userId}", summary="获取用户")
 async def read_user(
-        user_id: Annotated[int, Path(description="用户ID", example=1001)],
+        user_id: Annotated[
+            int,
+            Path(
+                description="用户ID",
+                alias="userId",
+                examples=[1001],
+                json_schema_extra={
+                    "example": 1001
+                }
+            )
+        ],
         session: SessionDepend
 ) -> UserPublic:
     u = session.get(User, user_id)
