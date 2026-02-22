@@ -38,7 +38,7 @@ class UserCreateResponse(BaseModel):
 
 
 class UserPublic(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(from_attributes=True, populate_by_name=True)
 
     id: int = Field(description="用户ID", examples=[1001])
     username: str = Field(description="用户名", examples=["bob"])
