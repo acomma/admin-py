@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from app.routers import user
 
+app = FastAPI(title="后台管理系统")
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World!"}
+app.include_router(user.router)
