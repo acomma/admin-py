@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     @computed_field
     @property
-    def SQLALCHEMY_DATABASE_URI(self) -> MySQLDsn:
+    def sqlalchemy_database_uri(self) -> MySQLDsn:
         return MySQLDsn.build(
             scheme="mysql+mysqlconnector",
             host=self.MYSQL_HOST,
