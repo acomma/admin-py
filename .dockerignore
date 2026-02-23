@@ -1,4 +1,5 @@
 README.md
+docs/
 
 # Python
 **/__pycache__/
@@ -6,8 +7,12 @@ README.md
 
 # Virtual environment
 .env
+.env.example
 .venv/
 venv/
+
+# Test
+tests/
 
 # Git
 .git
