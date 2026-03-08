@@ -30,7 +30,7 @@ docker run -d --name admin-py -p 80:80 `
     -e "MYSQL_PORT=3306" `
     -e "MYSQL_USERNAME=root" `
     -e "MYSQL_PASSWORD=123456" `
-    -e "MYSQL_DATABASE=example" `
+    -e "MYSQL_DATABASE=admin-py" `
     admin-py:latest
 ```
 - Windows (Command Prompt):
@@ -40,6 +40,6 @@ docker run -d --name admin-py -p 80:80 ^
     -e "MYSQL_PORT=3306" ^
     -e "MYSQL_USERNAME=root" ^
     -e "MYSQL_PASSWORD=123456" ^
-    -e "MYSQL_DATABASE=example" ^
+    -e "MYSQL_DATABASE=admin-py" ^
     admin-py:latest
 ```

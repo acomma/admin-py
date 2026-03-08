@@ -1,6 +1,6 @@
-CREATE DATABASE `example` DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
+CREATE DATABASE `admin-py` DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_bin;
 
-USE `example`;
+USE `admin-py`;
 
 CREATE TABLE `t_user` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '用户ID',
